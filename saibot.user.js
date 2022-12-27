@@ -410,9 +410,9 @@ unsafeWindow.saibot = (function (XMLHttpRequest, jQuery) {
                 // Split it
                 .split("-");
             // Make sure that there are only three parts
-            let _season = [];
-            let _chapter = [];
-            let _part = [];
+            let _season;
+            let _chapter;
+            let _part;
             if (3 < _titleParts.length) {
                 _part = _titleParts.pop().trim();
                 _chapter = _titleParts.pop().trim();
@@ -990,7 +990,6 @@ unsafeWindow.saibot = (function (XMLHttpRequest, jQuery) {
         },
         acceptAllNCGifts: function () {
             let _ncGiftCountCheck = display.showNCGiftAmount();
-            let _finished = false;
 
             // Finished?
             if (0 === _ncGiftCountCheck) {
